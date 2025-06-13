@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: scavenger-hunt-api
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        value: scavenger-hunt-secret-key-2024
